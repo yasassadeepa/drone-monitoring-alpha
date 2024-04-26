@@ -1,9 +1,8 @@
-export default function Home() {
-  return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='text-3xl font-bold'>Clerk starter</h1>
-      </div>
-    </section>
-  )
+import { getData } from "@/actions/todoActions";
+import AddTodo from "@/components/AddTodo";
+import Todo from "@/components/Todo";
+import Todos from "@/components/Todos";
+export default async function Home() {
+  const data = await getData();
+  return <Todos todos={data} />;
 }
