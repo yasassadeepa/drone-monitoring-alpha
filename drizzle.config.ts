@@ -6,7 +6,6 @@ export default {
   out: "./drizzle",
   driver: "pg",
   dbCredentials: {
-    connectionString:
-      "postgresql://drone-monitoring-db_owner:5bBFJhfuOZ3Y@ep-lingering-sun-a1pqmff3-pooler.ap-southeast-1.aws.neon.tech/drone-monitoring-db?sslmode=require",
+    connectionString: process.env.NEON_DATABASE_URL!,
   },
 } satisfies Config;

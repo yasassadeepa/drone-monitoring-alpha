@@ -6,7 +6,9 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:push": "drizzle-kit push:pg --config=drizzle.config.ts",
+    "studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.0.1",
